@@ -71,12 +71,16 @@ const PRICING_TIERS = [
 export default function PricingPage() {
   return (
     <ThemeProvider theme={pricingTheme}>
-      <CssBaseline />
       <Box sx={{ minHeight: "100vh", pb: 10, pt: { xs: 15, md: 20 } }}>
         <PricingHero />
 
         <Container maxWidth="lg" sx={{ mb: 15 }}>
-          <Grid container spacing={6} alignItems="stretch" justifyContent={"center"}>
+          <Grid
+            container
+            spacing={6}
+            alignItems="stretch"
+            justifyContent={"center"}
+          >
             {PRICING_TIERS.map((tier) => (
               <Grid item xs={12} md={4} key={tier.title}>
                 <PricingCard {...tier} />

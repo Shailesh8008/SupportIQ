@@ -32,12 +32,29 @@ const FAQ_DATA = [
 export default function FaqSection() {
   return (
     <Container maxWidth="md">
-      <Typography variant="h4" component="h2" align="center" sx={{ mb: 6 }}>
+      <Typography
+        variant="h4"
+        component="h2"
+        align="center"
+        sx={{ mb: 6 }}
+        className="text-foreground"
+      >
         Frequently asked questions
       </Typography>
       <Box>
         {FAQ_DATA.map((faq, i) => (
-          <Accordion key={i} disableGutters>
+          <Accordion
+            key={i}
+            disableGutters
+            sx={{
+              borderBottom: "1px solid var(--border)",
+              backgroundColor: "transparent",
+              boxShadow: "none",
+              "&:before": {
+                display: "none",
+              },
+            }}
+          >
             <AccordionSummary
               expandIcon={<ChevronDown size={20} color="#a1a1aa" />}
               sx={{ px: 0 }}
@@ -45,16 +62,19 @@ export default function FaqSection() {
               <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
                 <HelpCircle
                   size={18}
-                  color="#3b82f6"
-                  style={{ opacity: 0.5 }}
+                  style={{ opacity: 0.5, color: "var(--sidebar-primary)" }}
                 />
-                <Typography variant="subtitle1" fontWeight="medium">
+                <Typography
+                  variant="subtitle1"
+                  fontWeight="medium"
+                  className="text-foreground"
+                >
                   {faq.q}
                 </Typography>
               </Box>
             </AccordionSummary>
             <AccordionDetails sx={{ px: 0, pl: 5.5 }}>
-              <Typography color="text.secondary">{faq.a}</Typography>
+              <Typography className="text-foreground/60">{faq.a}</Typography>
             </AccordionDetails>
           </Accordion>
         ))}

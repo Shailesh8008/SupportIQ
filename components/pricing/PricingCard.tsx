@@ -40,7 +40,7 @@ export default function PricingCard({
     <Card
       sx={{
         height: "100%",
-        maxWidth:"330px",
+        maxWidth: "330px",
         display: "flex",
         flexDirection: "column",
         p: 2,
@@ -49,13 +49,13 @@ export default function PricingCard({
               position: "relative",
               borderColor: "primary.main",
               boxShadow: "0 0 20px rgba(59, 130, 246, 0.15)",
-              bgcolor: "rgba(24, 24, 27, 0.8)",
+              bgcolor: "var(--active-card)",
               transform: { md: "scale(1.05)" },
               zIndex: 1,
               overflow: "visible",
             }
           : {
-              bgcolor: "rgba(24, 24, 27, 0.5)",
+              bgcolor: "var(--card)",
               backdropFilter: "blur(10px)",
 
               "&:hover": { borderColor: "secondary.main" },
@@ -74,16 +74,16 @@ export default function PricingCard({
             left: "50%",
             transform: "translateX(-50%)",
             fontWeight: "bold",
-            cursor:"default"
+            cursor: "default",
           }}
         />
       )}
       <CardContent sx={{ flexGrow: 1 }}>
-        <Typography variant="h6" component="h3" gutterBottom>
+        <Typography variant="h6" component="h3" gutterBottom className="text-foreground">
           {title}
         </Typography>
         <Box sx={{ display: "flex", alignItems: "baseline", mb: 2 }}>
-          <Typography variant="h3" component="span" fontWeight="bold">
+          <Typography variant="h3" component="span" fontWeight="bold" className="text-foreground">
             <Currency
               locale={navigator.language}
               width={40}
@@ -106,7 +106,7 @@ export default function PricingCard({
               <ListItemIcon sx={{ minWidth: 32 }}>
                 <Check size={18} color="#3b82f6" />
               </ListItemIcon>
-              <ListItemText primary={feature} />
+              <ListItemText primary={feature} className="text-foreground" />
             </ListItem>
           ))}
         </List>
@@ -118,9 +118,9 @@ export default function PricingCard({
           mt: 2,
           ...(highlighted && {
             background: "linear-gradient(to right, #2563eb, #9333ea)",
-            color:"white",
+            color: "white",
             "&:hover": {
-              background: "linear-gradient(to right, #2563eb, #9333ea)"
+              background: "linear-gradient(to right, #2563eb, #9333ea)",
             },
           }),
         }}

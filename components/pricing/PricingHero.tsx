@@ -47,33 +47,25 @@ export default function PricingHero() {
 
       <Container maxWidth="md" sx={{ textAlign: "center", mb: 10 }}>
         <Typography
+          className="bg-clip-text text-transparent bg-gradient-to-b from-foreground via-foreground/90 to-foreground/50"
           variant="h2"
           component="h1"
           sx={{
             mb: 3,
-            background:
-              "linear-gradient(to bottom, #fafafa, rgba(250, 250, 250, 0.5))",
-            backgroundClip: "text",
-            textFillColor: "transparent",
-            color: "transparent",
           }}
         >
           Simple, Transparent
           <br />
           <Box
             component="span"
-            sx={{
-              background: "linear-gradient(to right, #60a5fa, #c084fc)",
-              backgroundClip: "text",
-              textFillColor: "transparent",
-            }}
+            className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400"
           >
             Pricing
           </Box>
         </Typography>
         <Typography
           variant="h5"
-          color="text.secondary"
+          className="text-foreground/60"
           sx={{ maxWidth: 600, mx: "auto", mb: 4, lineHeight: 1.6 }}
         >
           Choose the plan that fits your team. No hidden fees, no surprises.

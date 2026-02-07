@@ -2,7 +2,7 @@ import { Bot } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border bg-primary/5 pt-16 pb-8">
+    <footer className="border-t border-primary/20 pt-16 pb-8 bg-primary/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12 text-center">
           {/* Brand */}
@@ -14,7 +14,9 @@ export default function Footer() {
               <span className="text-xl font-bold text-primary">SupportIQ</span>
             </div>
             <p className="text-foreground/60 text-sm text-start">
-              A multi-channel support inbox that automatically classifies, prioritizes, and assigns tickets using AI, helping small teams respond faster and never miss critical issues.
+              A multi-channel support inbox that automatically classifies,
+              prioritizes, and assigns tickets using AI, helping small teams
+              respond faster and never miss critical issues.
             </p>
           </div>
 
@@ -93,7 +95,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-border pt-8 flex flex-col md:flex-row items-center gap-4 justify-center">
+        <div className="border-t border-primary/20 pt-8 flex flex-col md:flex-row items-center gap-4 justify-center">
           <p className="text-sm text-gray-500">
             © {new Date().getFullYear()} SupportIQ Inc. All rights reserved.
           </p>
