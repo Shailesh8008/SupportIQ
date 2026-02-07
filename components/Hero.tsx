@@ -28,13 +28,13 @@ export default function Hero() {
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button className="h-12 px-8 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-medium transition-all shadow-lg shadow-blue-500/25 flex items-center gap-2 group">
+          <Link href={"/"} className="h-12 px-8 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-medium transition-all shadow-lg shadow-blue-500/25 flex items-center gap-2 group cursor-pointer">
             Start Free Trial
             <ArrowRight className="w-5 h-5 sm:group-hover:translate-x-1 group-active:translate-x-1 transition-transform" />
-          </button>
-          <button className="h-12 px-8 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 text-white font-medium transition-all backdrop-blur-sm">
+          </Link>
+          <Link href={"/"} className="h-12 px-8 rounded-full bg-white/5 border border-border hover:bg-border text-foreground items-center flex font-medium transition-all backdrop-blur-sm cursor-pointer">
             View Live Demo
-          </button>
+          </Link>
         </div>
 
         <div className="mt-12 flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm text-gray-500">

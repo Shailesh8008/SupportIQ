@@ -7,14 +7,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12 text-center">
           {/* Brand */}
           <div className="col-span-1 md:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center gap-2 mb-4 cursor-default">
               <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
                 <Bot className="w-5 h-5 text-primary-foreground" />
               </div>
               <span className="text-xl font-bold text-primary">SupportIQ</span>
             </div>
-            <p className="text-foreground/60 text-sm">
-              AI-powered triage for modern support teams.
+            <p className="text-foreground/60 text-sm text-start">
+              A multi-channel support inbox that automatically classifies, prioritizes, and assigns tickets using AI, helping small teams respond faster and never miss critical issues.
             </p>
           </div>
 

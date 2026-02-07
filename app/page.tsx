@@ -2,11 +2,11 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-background selection:bg-primary/30">
-      <Navbar />
       <Hero />
       <Features />
       {/* Call to Action Section */}
@@ -20,12 +20,14 @@ export default function Home() {
             Join hundreds of fast-growing startups using SupportIQ to delight
             customers.
           </p>
-          <button className="h-12 px-8 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors">
+          <Link
+            href={"/"}
+            className="py-[13.25px] px-8 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors cursor-pointer"
+          >
             Get Started Now
-          </button>
+          </Link>
         </div>
       </section>
-      <Footer />
     </main>
   );
 }
