@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SupportIQ (AI-Powered Customer Support Triage SaaS) 🚀  
 
-## Getting Started
+SupportIQ is a modern SaaS application that helps small and growing teams manage customer support efficiently by automatically **classifying, prioritizing, and routing support tickets using AI**.
 
-First, run the development server:
+The platform is designed to reduce response time, prevent SLA breaches, and give teams a clear, real-time view of their support workload.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🧠 Problem It Solves
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Small startups and support teams often struggle with:
+- High volume of incoming tickets
+- No clear way to identify urgent issues
+- Manual ticket assignment
+- Missed SLAs and delayed responses
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+SupportIQ solves this by using **AI-driven triage** and **automation** to ensure the right tickets reach the right agents at the right time.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## ✨ Key Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🔹 Multi-Channel Ticket Ingestion
+- Web form support (initial MVP)
+- Extensible design for Email & WhatsApp integration
+- Unified inbox for all customer queries
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🔹 AI-Powered Ticket Classification
+- Automatic categorization (login, payment, bug, abuse, etc.)
+- AI-based urgency detection
+- Confidence-based fallback to rule-based logic
 
-## Deploy on Vercel
+### 🔹 Smart Ticket Prioritization
+- Priority levels: Low, Medium, High, Critical
+- SLA deadlines calculated based on priority
+- Visual indicators for urgent tickets
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🔹 Auto-Assignment Engine
+- Automatically assigns tickets to available agents
+- Skill-based and load-balanced routing
+- Manual reassignment when needed
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 🔹 SLA Monitoring & Alerts
+- SLA timers per ticket
+- Real-time SLA breach detection
+- Visual alerts for overdue responses
+
+### 🔹 Real-Time Dashboard
+- Live ticket updates using WebSockets
+- Agent workload overview
+- Priority and status breakdowns
+
+### 🔹 Analytics & Insights
+- Ticket volume trends
+- Priority distribution
+- Agent performance metrics
+
+### 🔹 Theme-Aware UI
+- Light / Dark mode using CSS variables
+- Consistent design tokens across the app
+- Tailwind + dynamic theming support
+
+---
+
+## 🧩 Tech Stack
+
+### Frontend
+- **Next.js (App Router)**
+- **React**
+- **Tailwind CSS**
+- **Material UI**
+- **shadcn/ui**
+- Client & Server Components
+- Real-time UI updates
+
+### Backend
+- Next.js API Routes or FastAPI (to be decided)
+- MongoDB
+- REST APIs
+- WebSocket (Socket.io)
+
+### AI & Automation
+- OpenAI API for ticket classification
+- Hybrid AI + rule-based logic
+- Background jobs for SLA tracking
+
