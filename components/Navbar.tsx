@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Bot, Home, Menu, X } from "lucide-react";
+import { ArrowRight, BadgeInfo, Bot, Home, Menu, Sparkles, X } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -34,21 +34,23 @@ export default function Navbar() {
               </Link>
               <Link
                 href="#features"
-                className={`text-sm font-medium ${pathname === "/features" ? "text-foreground" : "text-muted-foreground hover:text-foreground"} transition-colors`}
+                className={`text-sm font-medium ${pathname === "/features" ? "text-foreground" : "text-muted-foreground hover:text-foreground"} transition-colors flex items-center gap-1`}
               >
+                <Sparkles className="w-4 h-4" />
                 Features
               </Link>
               <Link
                 href="/pricing"
-                className={`text-sm font-medium ${pathname === "/pricing" ? "text-foreground" : "text-muted-foreground hover:text-foreground"} transition-colors flex items-center gap-1`}
+                className={`text-sm font-medium ${pathname === "/pricing" ? "text-foreground" : "text-muted-foreground hover:text-foreground"} transition-colors flex items-center gap-0.5`}
               >
                 <Currency locale={navigator.language} width={16} height={16} />
                 Pricing
               </Link>
               <Link
                 href="/about"
-                className={`text-sm font-medium ${pathname === "/about" ? "text-foreground" : "text-muted-foreground hover:text-foreground"} transition-colors`}
+                className={`text-sm font-medium ${pathname === "/about" ? "text-foreground" : "text-muted-foreground hover:text-foreground"} transition-colors flex items-center gap-1`}
               >
+                <BadgeInfo className="w-4 h-4" />
                 About
               </Link>
             </div>
@@ -58,7 +60,7 @@ export default function Navbar() {
             <ThemeToggle />
             <Link
               href="/login"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              className={`text-sm font-medium ${pathname === "/login" ? "text-foreground" : "text-muted-foreground hover:text-foreground"} transition-colors`}
             >
               Sign In
             </Link>
@@ -105,9 +107,10 @@ export default function Navbar() {
               </Link>
               <Link
                 href="#features"
-                className="block text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className={`text-base font-medium ${pathname === "/features" ? "text-foreground" : "text-muted-foreground hover:text-foreground"} transition-colors flex items-center gap-1`}
                 onClick={() => setIsOpen(false)}
               >
+                <Sparkles className="w-4 h-4" />
                 Features
               </Link>
               <Link
@@ -120,12 +123,13 @@ export default function Navbar() {
               </Link>
               <Link
                 href="/about"
-                className={`text-base font-medium ${pathname === "/about" ? "text-foreground" : "text-muted-foreground hover:text-foreground"} transition-colors`}
+                className={`text-base font-medium ${pathname === "/about" ? "text-foreground" : "text-muted-foreground hover:text-foreground"} transition-colors flex items-center gap-1`}
                 onClick={() => setIsOpen(false)}
               >
+                <BadgeInfo className="w-4 h-4" />
                 About
               </Link>
-              <div className="pt-4 flex flex-col gap-4 border-t border-border">
+              <div className="pt-4 flex flex-col gap-4 border-t border-foreground/20">
                 <Link
                   href="/login"
                   className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors"

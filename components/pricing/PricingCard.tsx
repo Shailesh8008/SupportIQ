@@ -14,6 +14,7 @@ import {
 } from "@mui/material";
 import { Check } from "lucide-react";
 import Currency from "./Currency";
+import { useRouter } from "next/navigation";
 
 interface PricingCardProps {
   title: string;
@@ -36,6 +37,8 @@ export default function PricingCard({
   highlighted = false,
   buttonVariant = "outlined",
 }: PricingCardProps) {
+  const router = useRouter();
+
   return (
     <Card
       sx={{
@@ -124,7 +127,7 @@ export default function PricingCard({
             },
           }),
         }}
-        href={buttonLink}
+        onClick={() => router.push(buttonLink)}
       >
         {buttonText}
       </Button>
